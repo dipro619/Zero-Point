@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <title>ZERO POINT · My Wishlist</title>
+  <!-- Font Awesome 6 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- MOBILE DRAWER -->
+  <div class="mobile-drawer" id="mobileDrawer">
+    <div class="close-drawer" id="closeDrawer"><i class="fas fa-times"></i></div>
+    <a onclick="navigateTo('index.html')">Home</a>
+    <a onclick="navigateTo('shop.html')">Shop</a>
+    <a onclick="navigateTo('new.html')">New Arrivals</a>
+    <a onclick="navigateTo('contact.html')">Contact</a>
+    <a onclick="navigateTo('wishlist.html')" class="active">Wishlist</a>
+  </div>
+  <div class="drawer-overlay" id="drawerOverlay"></div>
+
+  <!-- HEADER -->
+  <header class="sticky-header">
+    <div class="container header-inner">
+      <div class="hamburger" id="hamburgerBtn"><i class="fas fa-bars"></i></div>
+      <div class="logo" onclick="navigateTo('index.html')">ZERO<span>POINT</span></div>
+      <nav class="nav-links">
+        <a onclick="navigateTo('index.html')">Home</a>
+        <a onclick="navigateTo('shop.html')">Shop</a>
+        <a onclick="navigateTo('new.html')">New</a>
+        <a onclick="navigateTo('contact.html')">Contact</a>
+      </nav>
+      <div class="header-icons">
+        <i class="fas fa-search" onclick="alert('Search functionality (demo)')"></i>
+        <i class="far fa-heart active" onclick="navigateTo('wishlist.html')"></i>
+        <i class="fas fa-shopping-bag cart-count" id="cartIcon" data-count="0"></i>
+      </div>
+    </div>
+  </header>
+
+  <!-- MAIN CONTENT -->
+  <main>
+    <!-- Page Header -->
+    <div class="page-header">
+      <h1>My Wishlist</h1>
+      <p>Save your favorite items and shop them later</p>
+    </div>
+
+    <div class="container">
+      <!-- Wishlist Container -->
+      <div class="wishlist-container" id="wishlistContainer">
+        <!-- Wishlist Items will be injected here by JavaScript -->
+      </div>
+
+      <!-- Cart Preview -->
+      <div class="cart-preview" id="cartPreview">
+        <h3 style="margin-bottom: 16px;">Your Cart <span id="cartCount">0</span></h3>
+        <div id="cartItems"></div>
+        <div style="display: flex; justify-content: space-between; margin: 16px 0;">
+          <strong>Total:</strong>
+          <strong>$<span id="cartTotal">0.00</span></strong>
+        </div>
+        <button class="shop-now-btn" style="width: auto; padding: 12px 32px;" id="checkoutBtn">Checkout</button>
+      </div>
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 40px; margin-bottom: 40px;">
+        <div>
+          <h4 style="color: white; margin-bottom: 20px;">ZERO POINT</h4>
+          <p style="color: #888;">Minimal. Bold. Confident. Premium streetwear for the modern edge.</p>
+        </div>
+        <div>
+          <h4 style="color: white; margin-bottom: 20px;">Shop</h4>
+          <p><a onclick="navigateTo('shop.html')" style="color: #888; text-decoration: none; cursor: pointer;">All Products</a></p>
+          <p><a onclick="navigateTo('new.html')" style="color: #888; text-decoration: none; cursor: pointer;">New Arrivals</a></p>
+          <p><a onclick="navigateTo('shop.html?bestsellers')" style="color: #888; text-decoration: none; cursor: pointer;">Best Sellers</a></p>
+        </div>
+        <div>
+          <h4 style="color: white; margin-bottom: 20px;">Support</h4>
+          <p><a onclick="navigateTo('contact.html')" style="color: #888; text-decoration: none; cursor: pointer;">Contact</a></p>
+          <p><a onclick="alert('Size guide (demo)')" style="color: #888; text-decoration: none; cursor: pointer;">Size Guide</a></p>
+          <p><a onclick="alert('Shipping info (demo)')" style="color: #888; text-decoration: none; cursor: pointer;">Shipping</a></p>
+        </div>
+        <div>
+          <h4 style="color: white; margin-bottom: 20px;">Follow</h4>
+          <p><i class="fab fa-instagram" style="color: #888; margin-right: 16px;"></i> Instagram</p>
+          <p><i class="fab fa-twitter" style="color: #888; margin-right: 16px;"></i> Twitter</p>
+          <p><i class="fab fa-tiktok" style="color: #888; margin-right: 16px;"></i> TikTok</p>
+        </div>
+      </div>
+      <div style="text-align: center; color: #888; padding-top: 40px; border-top: 1px solid #222;">
+        © 2026 ZERO POINT. All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+  <!-- BOTTOM CART -->
+  <div class="bottom-cart" id="bottomCart">
+    <i class="fas fa-shopping-bag"></i>
+  </div>
+
+  <!-- BACK TO TOP -->
+  <div class="back-to-top" id="backToTop">
+    <i class="fas fa-arrow-up"></i>
+  </div>
+
+  <script src="main.js"></script>
+</body>
+</html>

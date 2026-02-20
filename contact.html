@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <title>ZERO POINT · Contact</title>
+  <!-- Font Awesome 6 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- MOBILE DRAWER -->
+  <div class="mobile-drawer" id="mobileDrawer">
+    <div class="close-drawer" id="closeDrawer"><i class="fas fa-times"></i></div>
+    <a href="index.html">Home</a>
+    <a href="shop.html">Shop</a>
+    <a href="new.html">New Arrivals</a>
+    <a href="product.html">Hoodie</a>
+    <a href="contact.html" class="active">Contact</a>
+  </div>
+  <div class="drawer-overlay" id="drawerOverlay"></div>
+
+  <!-- HEADER -->
+  <header class="sticky-header">
+    <div class="container header-inner">
+      <div class="hamburger" id="hamburgerBtn"><i class="fas fa-bars"></i></div>
+      <div class="logo" id="logoHome">ZERO<span>POINT</span></div>
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="shop.html">Shop</a>
+        <a href="new.html">New</a>
+        <a href="contact.html" class="active">Contact</a>
+      </nav>
+      <div class="header-icons">
+        <i class="fas fa-search"></i>
+        <i class="far fa-heart"></i>
+        <i class="fas fa-shopping-bag cart-count" id="cartIcon" data-count="0"></i>
+      </div>
+    </div>
+  </header>
+
+  <!-- MAIN CONTENT - CONTACT PAGE -->
+  <main>
+    <!-- Page Header -->
+    <div class="page-header">
+      <h1>Get in Touch</h1>
+      <p>We'd love to hear from you. Our team is always here to help.</p>
+    </div>
+
+    <div class="container">
+      <!-- Contact Grid -->
+      <div class="contact-grid">
+        <!-- Contact Information -->
+        <div class="contact-info">
+          <h2>Contact Information</h2>
+          
+          <div class="contact-detail">
+            <i class="fas fa-map-marker-alt"></i>
+            <div>
+              <h3>Visit Us</h3>
+              <p>123 Edge Street<br>Fashion District<br>New York, NY 10001</p>
+            </div>
+          </div>
+
+          <div class="contact-detail">
+            <i class="fas fa-phone-alt"></i>
+            <div>
+              <h3>Call Us</h3>
+              <p>+1 (212) 555-0123<br>Mon-Fri, 9am-6pm EST</p>
+            </div>
+          </div>
+
+          <div class="contact-detail">
+            <i class="fas fa-envelope"></i>
+            <div>
+              <h3>Email Us</h3>
+              <p>hello@zeropoint.com<br>support@zeropoint.com</p>
+            </div>
+          </div>
+
+          <div class="contact-detail">
+            <i class="fas fa-clock"></i>
+            <div>
+              <h3>Business Hours</h3>
+              <div class="hours-item">
+                <span>Monday - Friday</span>
+                <span>9:00 AM - 8:00 PM</span>
+              </div>
+              <div class="hours-item">
+                <span>Saturday</span>
+                <span>10:00 AM - 6:00 PM</span>
+              </div>
+              <div class="hours-item">
+                <span>Sunday</span>
+                <span>12:00 PM - 5:00 PM</span>
+              </div>
+            </div>
+          </div>
+
+          <div style="display: flex; gap: 16px; margin-top: 30px;">
+            <i class="fab fa-instagram" style="font-size: 1.8rem; cursor: pointer;"></i>
+            <i class="fab fa-twitter" style="font-size: 1.8rem; cursor: pointer;"></i>
+            <i class="fab fa-facebook" style="font-size: 1.8rem; cursor: pointer;"></i>
+            <i class="fab fa-tiktok" style="font-size: 1.8rem; cursor: pointer;"></i>
+          </div>
+        </div>
+
+        <!-- Contact Form -->
+        <div class="contact-form">
+          <h2>Send us a Message</h2>
+          <div id="successMessage" class="success-message" style="display: none;">
+            <i class="fas fa-check-circle"></i>
+            Thank you! Your message has been sent.
+          </div>
+          <form id="contactForm">
+            <div class="form-row">
+              <div class="form-group">
+                <label>First Name *</label>
+                <input type="text" id="firstName" required>
+              </div>
+              <div class="form-group">
+                <label>Last Name</label>
+                <input type="text" id="lastName">
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label>Email *</label>
+              <input type="email" id="email" required>
+            </div>
+
+            <div class="form-group">
+              <label>Phone</label>
+              <input type="tel" id="phone" placeholder="+1 (123) 456-7890">
+            </div>
+
+            <div class="form-group">
+              <label>Subject *</label>
+              <select id="subject" required>
+                <option value="">Select a subject</option>
+                <option value="General">General Inquiry</option>
+                <option value="Order">Order Support</option>
+                <option value="Returns">Returns & Exchanges</option>
+                <option value="Wholesale">Wholesale</option>
+                <option value="Collaboration">Collaboration</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label>Message *</label>
+              <textarea id="message" required></textarea>
+            </div>
+
+            <div class="form-group">
+              <label style="display: flex; align-items: center; gap: 8px;">
+                <input type="checkbox" id="newsletter" checked>
+                Subscribe to our newsletter
+              </label>
+            </div>
+
+            <button type="submit" class="submit-btn">
+              Send Message <i class="fas fa-paper-plane"></i>
+            </button>
+          </form>
+        </div>
+      </div>
+
+      <!-- Map Section -->
+      <div class="map-section">
+        <h2 style="margin-bottom: 30px;">Find Us Here</h2>
+        <div class="map-container">
+          <div class="map-placeholder">
+            <div class="map-overlay">
+              <i class="fas fa-map-marked-alt"></i>
+              <p>ZERO POINT Flagship Store<br>123 Edge Street, New York, NY</p>
+              <button class="direction-btn" style="margin-top: 16px;" onclick="window.open('https://maps.google.com')">
+                Get Directions <i class="fas fa-arrow-right"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Store Locations -->
+      <div class="store-locations">
+        <h2 style="text-align: center; margin-bottom: 40px;">Our Stores</h2>
+        <div class="locations-grid">
+          <div class="location-card">
+            <i class="fas fa-store"></i>
+            <h3>New York</h3>
+            <p>123 Edge Street<br>Fashion District<br>NY 10001</p>
+            <button class="direction-btn">Get Directions</button>
+          </div>
+          <div class="location-card">
+            <i class="fas fa-store"></i>
+            <h3>Los Angeles</h3>
+            <p>456 Sunset Blvd<br>Downtown LA<br>CA 90001</p>
+            <button class="direction-btn">Get Directions</button>
+          </div>
+          <div class="location-card">
+            <i class="fas fa-store"></i>
+            <h3>Miami</h3>
+            <p>789 Ocean Drive<br>South Beach<br>FL 33139</p>
+            <button class="direction-btn">Get Directions</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- FAQ Section -->
+      <div class="faq-section">
+        <h2>Frequently Asked Questions</h2>
+        <div class="faq-grid">
+          <div class="faq-item">
+            <h3><i class="fas fa-truck"></i> Shipping Times</h3>
+            <p>Standard shipping takes 3-5 business days. Express shipping is available for 1-2 business days. International shipping varies by location.</p>
+          </div>
+          <div class="faq-item">
+            <h3><i class="fas fa-undo-alt"></i> Returns Policy</h3>
+            <p>We offer 30-day returns for unworn items with original tags. Visit our returns center to initiate a return.</p>
+          </div>
+          <div class="faq-item">
+            <h3><i class="fas fa-credit-card"></i> Payment Methods</h3>
+            <p>We accept all major credit cards, PayPal, Apple Pay, and Google Pay. Secure checkout guaranteed.</p>
+          </div>
+          <div class="faq-item">
+            <h3><i class="fas fa-ruler"></i> Size Guide</h3>
+            <p>Check our detailed size guide for measurements. We offer free exchanges for size issues.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Cart Preview -->
+      <div class="cart-preview" id="cartPreview">
+        <h3 style="margin-bottom: 16px;">Your Cart <span id="cartCount">0</span></h3>
+        <div id="cartItems"></div>
+        <div style="display: flex; justify-content: space-between; margin: 16px 0;">
+          <strong>Total:</strong>
+          <strong>$<span id="cartTotal">0.00</span></strong>
+        </div>
+        <button class="submit-btn" style="width: auto; padding: 12px 32px;" id="checkoutBtn">Checkout</button>
+      </div>
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <div style="display: flex; justify-content: space-between; flex-wrap: wrap; gap: 20px;">
+        <div>© 2026 ZERO POINT</div>
+        <div>minimal · bold · confident</div>
+        <div><i class="fas fa-envelope"></i> hello@zeropoint.com</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- BOTTOM CART -->
+  <div class="bottom-cart" id="bottomCart">
+    <i class="fas fa-shopping-bag"></i>
+  </div>
+
+  <!-- BACK TO TOP -->
+  <div class="back-to-top" id="backToTop">
+    <i class="fas fa-arrow-up"></i>
+  </div>
+
+  <script src="main.js"></script>
+</body>
+</html>
